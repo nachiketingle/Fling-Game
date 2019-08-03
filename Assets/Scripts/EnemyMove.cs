@@ -25,7 +25,7 @@ public class EnemyMove : MovingItem
 
         //Initialize values of enemmy
         speed = speed * Mathf.Pow(1.1F, score.GetLevel() - 1); //Calculate speed based on level
-        angle = Random.value * Mathf.PI;
+        angle = Random.value * Mathf.PI; //Random angle from 0 to pi
         vy = -1 * Mathf.Sin(angle);
         vx = Mathf.Cos(angle);
         velocity = speed * new Vector3(vx, vy, 0);
